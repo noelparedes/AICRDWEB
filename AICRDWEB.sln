@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICRDWEB", "AICRDWEB\AICRDWEB.csproj", "{A8DEC449-AC22-4BB5-936F-277F5B96A97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICRD.Data", "C:\Users\Noel\Desktop\AICRDWEB\AICRDWEB.Data\AICRD.Data.csproj", "{028F29E1-EDFB-4460-AE3E-91A7BC757B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICRDWEB.DataAccess", "AICRDWEB.DataAccess\AICRDWEB.DataAccess.csproj", "{99036BED-C185-4A58-88A2-DA7866D2F383}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8DEC449-AC22-4BB5-936F-277F5B96A97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DEC449-AC22-4BB5-936F-277F5B96A97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DEC449-AC22-4BB5-936F-277F5B96A97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DEC449-AC22-4BB5-936F-277F5B96A97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028F29E1-EDFB-4460-AE3E-91A7BC757B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028F29E1-EDFB-4460-AE3E-91A7BC757B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028F29E1-EDFB-4460-AE3E-91A7BC757B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028F29E1-EDFB-4460-AE3E-91A7BC757B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99036BED-C185-4A58-88A2-DA7866D2F383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99036BED-C185-4A58-88A2-DA7866D2F383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99036BED-C185-4A58-88A2-DA7866D2F383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99036BED-C185-4A58-88A2-DA7866D2F383}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
