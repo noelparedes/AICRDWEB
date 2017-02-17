@@ -3,16 +3,16 @@
 
 namespace AICRDWEB.Models
 {
-    public class AICRDWEBDbContext: DbContext
+    public class AICRDWEBDbContext : DbContext
     {
-        public DbSet<Asociacion> Asociacion { get; set; }
-        public DbSet<Cargos> Cargo { get; set; }
-        public DbSet<Circuitos> Circuito { get; set; }
-        public DbSet<Iglesias> Iglesia { get; set; }
+        public DbSet<Asociacion> Asociaciones { get; set; }
+        public DbSet<Cargos> Cargos { get; set; }
+        public DbSet<Circuitos> Circuitos { get; set; }
+        public DbSet<Iglesias> Iglesias { get; set; }
         public DbSet<ImagenesMiembro> ImagenMiembros { get; set; }
-        public DbSet<Miembros> Miembro { get; set; }
+        public DbSet<Miembros> Miembros { get; set; }
         public DbSet<Region> Regiones { get; set; }
-        public DbSet<RegistroConvencion> Registro { get; set; }
+        public DbSet<RegistroConvencion> Registros { get; set; }
 
 
 

@@ -8,9 +8,12 @@ namespace AICRDWEB.Models
     [Table("Iglesias")]
     public class Iglesias
     {
-        
+
         [Key]
         public int IdIglesia { get; set; }
+
+        [Display(Name = "Circuitos")]
+        public int IdCircuito { get; set; }
 
         [Display(Name = "Iglesia")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
@@ -37,7 +40,8 @@ namespace AICRDWEB.Models
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public string Direccion { get; set; }
 
-
+        [ForeignKey("IdCircuito")]
+        public virtual Circuitos Circuito { get; set; }
 
 
 

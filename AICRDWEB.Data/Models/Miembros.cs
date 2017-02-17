@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AICRDWEB.Models
 {
     [Table("Miembros")]
-    public class Miembros:Personas
+    public class Miembros : Personas
     {
         [Display(Name = "Miembro")]
         [Key]
@@ -16,8 +16,11 @@ namespace AICRDWEB.Models
         [Display(Name = "Asociacion")]
         public int IdAsociacion { get; set; }
 
-        [Display(Name = "Imagen del Miembro")]
-        public int IdImagen { get; set; }
+        //[Display(Name = "Imagen del Miembro")]
+        //public int IdImagen { get; set; }
+
+        [Display(Name = "Iglesia")]
+        public int IdIglesia { get; set; }
 
         public EstadoMiembro Estado { get; set; }
 
@@ -26,6 +29,13 @@ namespace AICRDWEB.Models
 
         [ForeignKey("IdAsociacion")]
         public virtual Asociacion Asociasion { get; set; }
+
+        //[ForeignKey("IdImagen")]
+        //public virtual ImagenesMiembro imagen { get; set; }
+
+        [ForeignKey("IdIglesia")]
+        public virtual Iglesias Iglesia { get; set; }
+
 
         public Miembros()
         {

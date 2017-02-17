@@ -168,6 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CircuitosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,9 +236,15 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Circuitos\Create.cshtml" />
+    <Content Include="Views\Circuitos\Delete.cshtml" />
+    <Content Include="Views\Circuitos\Details.cshtml" />
+    <Content Include="Views\Circuitos\Edit.cshtml" />
+    <Content Include="Views\Circuitos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -245,6 +253,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AICRDWEB.DataAccess\AICRDWEB.DataAccess.csproj">
+      <Project>{99036bed-c185-4a58-88a2-da7866d2f383}</Project>
+      <Name>AICRDWEB.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AICRDWEB.Data\AICRDWEB.Data.csproj">
+      <Project>{85ec1617-cf6f-4a6e-94d8-d177af014335}</Project>
+      <Name>AICRDWEB.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
