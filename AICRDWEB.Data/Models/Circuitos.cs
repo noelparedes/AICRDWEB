@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AICRDWEB.Models
@@ -7,7 +6,7 @@ namespace AICRDWEB.Models
     [Table("Circuitos")]
     public class Circuitos
     {
-        public readonly List<Region> _regiones;
+        //public readonly List<Region> _regiones;
 
         [Display(Name = "Circuito")]
         [Key]
