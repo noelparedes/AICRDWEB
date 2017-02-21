@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AICRDWEB.Models.Iglesias>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Circuito.NombreCircuito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreIglesia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fundador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaFundacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadMiembro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Circuito.NombreCircuito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreIglesia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fundador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaFundacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadMiembro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdIglesia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdIglesia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdIglesia })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,74 @@
+﻿@model AICRDWEB.Models.Iglesias
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Iglesias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Circuito.NombreCircuito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Circuito.NombreCircuito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreIglesia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreIglesia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fundador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fundador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaFundacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaFundacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadMiembro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadMiembro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdIglesia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

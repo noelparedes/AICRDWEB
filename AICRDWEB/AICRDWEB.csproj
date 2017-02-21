@@ -171,6 +171,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CircuitosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IglesiasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RegionsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -247,6 +248,11 @@
     <Content Include="Views\Circuitos\Details.cshtml" />
     <Content Include="Views\Circuitos\Edit.cshtml" />
     <Content Include="Views\Circuitos\Index.cshtml" />
+    <Content Include="Views\Iglesias\Create.cshtml" />
+    <Content Include="Views\Iglesias\Delete.cshtml" />
+    <Content Include="Views\Iglesias\Details.cshtml" />
+    <Content Include="Views\Iglesias\Edit.cshtml" />
+    <Content Include="Views\Iglesias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
