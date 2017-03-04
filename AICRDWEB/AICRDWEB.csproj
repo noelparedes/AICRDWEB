@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AsociacionesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CircuitosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -253,6 +254,11 @@
     <Content Include="Views\Iglesias\Details.cshtml" />
     <Content Include="Views\Iglesias\Edit.cshtml" />
     <Content Include="Views\Iglesias\Index.cshtml" />
+    <Content Include="Views\Asociaciones\Create.cshtml" />
+    <Content Include="Views\Asociaciones\Delete.cshtml" />
+    <Content Include="Views\Asociaciones\Details.cshtml" />
+    <Content Include="Views\Asociaciones\Edit.cshtml" />
+    <Content Include="Views\Asociaciones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

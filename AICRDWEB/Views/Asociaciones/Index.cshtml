@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AICRDWEB.Models.Asociacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LogoAsociacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlternateText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreAsociacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LemaAsociacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LogoAsociacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlternateText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreAsociacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LemaAsociacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdAsociacion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdAsociacion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdAsociacion })
+        </td>
+    </tr>
+}
+
+</table>

@@ -35,5 +35,7 @@ namespace AICRDWEB.Models
         public System.Data.Entity.DbSet<AICRDWEB.Models.Iglesias> Iglesias { get; set; }
 
         public System.Data.Entity.DbSet<AICRDWEB.Models.Region> Regions { get; set; }
+
+        public System.Data.Entity.DbSet<AICRDWEB.Models.Asociacion> Asociacions { get; set; }
     }
 }
