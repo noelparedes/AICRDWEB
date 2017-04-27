@@ -11,12 +11,12 @@ namespace AICRDWEB.Models
         public int IdAsociacion { get; set; }
 
 
-        [Display(Name = "Nombre de la Asociacion")]
+        [Display(Name = "Logo de La Asociacion")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(120, ErrorMessage = "La longitud máxima del campo {0} es {1}")]
         public string LogoAsociacion { get; set; }
 
-        [Display(Name = "Nombre de la Asociacion")]
+        [Display(Name = "Direccion Imagen")]
         //[Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(100, ErrorMessage = "La longitud máxima del campo {0} es {1}")]
         public string AlternateText { get; set; }

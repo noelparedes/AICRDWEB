@@ -1,0 +1,90 @@
+﻿@model AICRDWEB.Models.Miembros
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Miembros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asociasion.LogoAsociacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asociasion.LogoAsociacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo.Cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Iglesia.NombreIglesia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Iglesia.NombreIglesia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdMiembro }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

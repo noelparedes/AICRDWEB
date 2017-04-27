@@ -1,18 +1,23 @@
-﻿using AICRDWEB.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
+using AICRDWEB.Models;
 
 namespace AICRDWEB.Controllers
 {
     public class AsociacionesController : BaseController
     {
-        //private ApplicationDbContext db = new ApplicationDbContext();
+      //  private AICRDWEBDbContext db = new AICRDWEBDbContext();
 
         // GET: Asociaciones
         public ActionResult Index()
         {
+            //var asoci = dbContext.Asociaciones.Include();
             return View(dbContext.Asociaciones.ToList());
         }
 
@@ -115,7 +120,7 @@ namespace AICRDWEB.Controllers
         //{
         //    if (disposing)
         //    {
-        //        dbContext.Dispose();
+        //        db.Dispose();
         //    }
         //    base.Dispose(disposing);
         //}
