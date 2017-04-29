@@ -28,11 +28,11 @@ namespace AICRDWEB.Models
         [StringLength(50, ErrorMessage = "La longitud máxima del campo {0} es {1}")]
         public string Fundador { get; set; }
 
-        [Display(Name = "Fecha de Fundacion")]
+        [Display(Name = "F. Fundacion")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime FechaFundacion { get; set; }
 
-        [Display(Name = "Cantidad de Miembros")]
+        [Display(Name = "Cantidad Miembros")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         public int CantidadMiembro { get; set; }
 

@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201702220334039_Agregando nuevos Campo Imagen Asociacion.Designer.cs">
       <DependentUpon>201702220334039_Agregando nuevos Campo Imagen Asociacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704290235091_Agregando IdCircuito a la tabla miembros.cs" />
+    <Compile Include="Migrations\201704290235091_Agregando IdCircuito a la tabla miembros.Designer.cs">
+      <DependentUpon>201704290235091_Agregando IdCircuito a la tabla miembros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702220334039_Agregando nuevos Campo Imagen Asociacion.resx">
       <DependentUpon>201702220334039_Agregando nuevos Campo Imagen Asociacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704290235091_Agregando IdCircuito a la tabla miembros.resx">
+      <DependentUpon>201704290235091_Agregando IdCircuito a la tabla miembros.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

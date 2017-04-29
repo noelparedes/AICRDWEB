@@ -14,14 +14,14 @@ namespace AICRDWEB.Controllers
     {
         //private AICRDWEBDbContext db = new AICRDWEBDbContext();
 
-        // GET: Miembros
+        // GET: Miembro
         public ActionResult Index()
         {
-            var miembros = dbContext.Miembros.Include(m => m.Asociasion).Include(m => m.Cargo).Include(m => m.Iglesia);
+            var miembros = dbContext.Miembros.Include(m => m.Asociasion).Include(m => m.Cargo).Include(m => m.Circuito).Include(m => m.Iglesia);
             return View(miembros.ToList());
         }
 
-        // GET: Miembros/Details/5
+        // GET: Miembro/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,21 +36,22 @@ namespace AICRDWEB.Controllers
             return View(miembros);
         }
 
-        // GET: Miembros/Create
+        // GET: Miembro/Create
         public ActionResult Create()
         {
-            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "LogoAsociacion");
+            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "NombreAsociacion");
             ViewBag.IdCargo = new SelectList(dbContext.Cargos, "IdCargo", "Cargo");
+            ViewBag.IdCircuito = new SelectList(dbContext.Circuitos, "IdCircuito", "NombreCircuito");
             ViewBag.IdIglesia = new SelectList(dbContext.Iglesias, "IdIglesia", "NombreIglesia");
             return View();
         }
 
-        // POST: Miembros/Create
+        // POST: Miembro/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdMiembro,IdCargo,IdAsociacion,IdIglesia,Estado,Nombres,Apellidos,Direccion,FechaNacimiento,Telefono")] Miembros miembros)
+        public ActionResult Create([Bind(Include = "IdMiembro,IdCargo,IdAsociacion,IdIglesia,IdCircuito,Estado,Nombres,Apellidos,Direccion,FechaNacimiento,Telefono")] Miembros miembros)
         {
             if (ModelState.IsValid)
             {
@@ -59,13 +60,14 @@ namespace AICRDWEB.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "LogoAsociacion", miembros.IdAsociacion);
+            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "NombreAsociacion", miembros.IdAsociacion);
             ViewBag.IdCargo = new SelectList(dbContext.Cargos, "IdCargo", "Cargo", miembros.IdCargo);
+            ViewBag.IdCircuito = new SelectList(dbContext.Circuitos, "IdCircuito", "NombreCircuito", miembros.IdCircuito);
             ViewBag.IdIglesia = new SelectList(dbContext.Iglesias, "IdIglesia", "NombreIglesia", miembros.IdIglesia);
             return View(miembros);
         }
 
-        // GET: Miembros/Edit/5
+        // GET: Miembro/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,18 +79,19 @@ namespace AICRDWEB.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "LogoAsociacion", miembros.IdAsociacion);
+            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "NombreAsociacion", miembros.IdAsociacion);
             ViewBag.IdCargo = new SelectList(dbContext.Cargos, "IdCargo", "Cargo", miembros.IdCargo);
+            ViewBag.IdCircuito = new SelectList(dbContext.Circuitos, "IdCircuito", "NombreCircuito", miembros.IdCircuito);
             ViewBag.IdIglesia = new SelectList(dbContext.Iglesias, "IdIglesia", "NombreIglesia", miembros.IdIglesia);
             return View(miembros);
         }
 
-        // POST: Miembros/Edit/5
+        // POST: Miembro/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdMiembro,IdCargo,IdAsociacion,IdIglesia,Estado,Nombres,Apellidos,Direccion,FechaNacimiento,Telefono")] Miembros miembros)
+        public ActionResult Edit([Bind(Include = "IdMiembro,IdCargo,IdAsociacion,IdIglesia,IdCircuito,Estado,Nombres,Apellidos,Direccion,FechaNacimiento,Telefono")] Miembros miembros)
         {
             if (ModelState.IsValid)
             {
@@ -96,13 +99,14 @@ namespace AICRDWEB.Controllers
                 dbContext.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "LogoAsociacion", miembros.IdAsociacion);
+            ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "NombreAsociacion", miembros.IdAsociacion);
             ViewBag.IdCargo = new SelectList(dbContext.Cargos, "IdCargo", "Cargo", miembros.IdCargo);
+            ViewBag.IdCircuito = new SelectList(dbContext.Circuitos, "IdCircuito", "NombreCircuito", miembros.IdCircuito);
             ViewBag.IdIglesia = new SelectList(dbContext.Iglesias, "IdIglesia", "NombreIglesia", miembros.IdIglesia);
             return View(miembros);
         }
 
-        // GET: Miembros/Delete/5
+        // GET: Miembro/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -117,7 +121,7 @@ namespace AICRDWEB.Controllers
             return View(miembros);
         }
 
-        // POST: Miembros/Delete/5
+        // POST: Miembro/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -128,13 +132,13 @@ namespace AICRDWEB.Controllers
             return RedirectToAction("Index");
         }
 
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing)
-        //    {
-        //        dbContext.Dispose();
-        //    }
-        //    base.Dispose(disposing);
-        //}
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                dbContext.Dispose();
+            }
+            base.Dispose(disposing);
+        }
     }
 }

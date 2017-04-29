@@ -1,4 +1,4 @@
-﻿@model IEnumerable<AICRDWEB.Models.Miembros>
+﻿@model IEnumerable<AICRDWEB.Models.RegistroConvencion>
 
 @{
     ViewBag.Title = "Index";
@@ -12,19 +12,25 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Asociasion.NombreAsociacion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cargo.Cargo)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Circuito.NombreCircuito)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Iglesia.NombreIglesia)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Estado)
+            @Html.DisplayNameFor(model => model.Miembro.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Costo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exhonerado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observaciones)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Nombres)
@@ -47,19 +53,25 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Asociasion.NombreAsociacion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cargo.Cargo)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Circuito.NombreCircuito)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Iglesia.NombreIglesia)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Estado)
+            @Html.DisplayFor(modelItem => item.Miembro.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Costo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Exhonerado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observaciones)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Nombres)
@@ -77,9 +89,9 @@
             @Html.DisplayFor(modelItem => item.Telefono)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdMiembro }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdMiembro }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdMiembro })
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdRegistro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdRegistro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdRegistro })
         </td>
     </tr>
 }

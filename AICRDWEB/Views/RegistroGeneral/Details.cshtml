@@ -1,4 +1,4 @@
-﻿@model AICRDWEB.Models.Miembros
+﻿@model AICRDWEB.Models.RegistroConvencion
 
 @{
     ViewBag.Title = "Details";
@@ -7,25 +7,9 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Miembros</h4>
+    <h4>RegistroConvencion</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Asociasion.NombreAsociacion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Asociasion.NombreAsociacion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cargo.Cargo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cargo.Cargo)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Circuito.NombreCircuito)
         </dt>
@@ -43,11 +27,43 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Estado)
+            @Html.DisplayNameFor(model => model.Miembro.Nombres)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Estado)
+            @Html.DisplayFor(model => model.Miembro.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Costo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Costo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRegistro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Exhonerado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Exhonerado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
         </dd>
 
         <dt>
@@ -93,6 +109,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdMiembro }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdRegistro }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

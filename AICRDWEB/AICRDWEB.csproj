@@ -170,16 +170,17 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AsociacionesController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CargosController.cs" />
     <Compile Include="Controllers\CircuitosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IglesiasController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MiembrosController.cs" />
     <Compile Include="Controllers\RegionsController.cs" />
+    <Compile Include="Controllers\RegistroGeneralController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -272,6 +273,16 @@
     <Content Include="Views\Asociaciones\Details.cshtml" />
     <Content Include="Views\Asociaciones\Edit.cshtml" />
     <Content Include="Views\Asociaciones\Index.cshtml" />
+    <Content Include="Views\Cargos\Create.cshtml" />
+    <Content Include="Views\Cargos\Delete.cshtml" />
+    <Content Include="Views\Cargos\Details.cshtml" />
+    <Content Include="Views\Cargos\Edit.cshtml" />
+    <Content Include="Views\Cargos\Index.cshtml" />
+    <Content Include="Views\RegistroGeneral\Create.cshtml" />
+    <Content Include="Views\RegistroGeneral\Delete.cshtml" />
+    <Content Include="Views\RegistroGeneral\Details.cshtml" />
+    <Content Include="Views\RegistroGeneral\Edit.cshtml" />
+    <Content Include="Views\RegistroGeneral\Index.cshtml" />
     <Content Include="Views\Miembros\Create.cshtml" />
     <Content Include="Views\Miembros\Delete.cshtml" />
     <Content Include="Views\Miembros\Details.cshtml" />

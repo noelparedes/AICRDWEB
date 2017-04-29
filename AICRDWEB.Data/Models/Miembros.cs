@@ -22,6 +22,9 @@ namespace AICRDWEB.Models
         [Display(Name = "Iglesia")]
         public int IdIglesia { get; set; }
 
+        [Display(Name = "Circuito")]
+        public int IdCircuito { get; set; }
+
         public EstadoMiembro Estado { get; set; }
 
         [ForeignKey("IdCargo")]
@@ -35,6 +38,9 @@ namespace AICRDWEB.Models
 
         [ForeignKey("IdIglesia")]
         public virtual Iglesias Iglesia { get; set; }
+
+        [ForeignKey("IdCircuito")]
+        public virtual Circuitos Circuito { get; set; }
 
 
         public Miembros()
