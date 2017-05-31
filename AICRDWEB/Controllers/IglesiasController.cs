@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AICRDWEB.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace AICRDWEB.Controllers
 {
@@ -15,10 +17,19 @@ namespace AICRDWEB.Controllers
         //private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Iglesias
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var iglesias = dbContext.Iglesias.Include(i => i.Circuito);
-            return View(iglesias.ToList());
+            return View(iglesias.ToList().ToPagedList(page ?? 1,10));
+        }
+
+
+
+
+        public ActionResult IglesiasbyCircuito(int id)
+        {
+            var iglesias = dbContext.Iglesias.Where(i => i.IdCircuito == id);
+            return Json(new { Iglesias = iglesias.ToList() }, JsonRequestBehavior.AllowGet);
         }
 
         // GET: Iglesias/Details/5

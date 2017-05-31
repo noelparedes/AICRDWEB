@@ -19,7 +19,9 @@ namespace AICRDWEB.Controllers
         {
             var miembros = dbContext.Miembros.Include(m => m.Asociasion).Include(m => m.Cargo).Include(m => m.Circuito).Include(m => m.Iglesia);
             return View(miembros.ToList());
+            
         }
+
 
         // GET: Miembro/Details/5
         public ActionResult Details(int? id)
@@ -39,12 +41,15 @@ namespace AICRDWEB.Controllers
         // GET: Miembro/Create
         public ActionResult Create()
         {
+          
+
             ViewBag.IdAsociacion = new SelectList(dbContext.Asociaciones, "IdAsociacion", "NombreAsociacion");
             ViewBag.IdCargo = new SelectList(dbContext.Cargos, "IdCargo", "Cargo");
             ViewBag.IdCircuito = new SelectList(dbContext.Circuitos, "IdCircuito", "NombreCircuito");
             ViewBag.IdIglesia = new SelectList(dbContext.Iglesias, "IdIglesia", "NombreIglesia");
-            return View();
+           return View();
         }
+       
 
         // POST: Miembro/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -65,6 +70,16 @@ namespace AICRDWEB.Controllers
             ViewBag.IdCircuito = new SelectList(dbContext.Circuitos, "IdCircuito", "NombreCircuito", miembros.IdCircuito);
             ViewBag.IdIglesia = new SelectList(dbContext.Iglesias, "IdIglesia", "NombreIglesia", miembros.IdIglesia);
             return View(miembros);
+        }
+        public ActionResult IglesiasbyCircuito(int id)
+        {
+            var iglesias = dbContext.Iglesias.Where(i => i.IdCircuito == id);
+            return Json(new { Iglesias = iglesias.ToList() }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult Select()
+        {
+            return View();
         }
 
         // GET: Miembro/Edit/5

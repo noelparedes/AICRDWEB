@@ -3,6 +3,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace AICRDWEB.Controllers
 {
@@ -11,10 +13,10 @@ namespace AICRDWEB.Controllers
         //private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Circuitos
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var circuitos = dbContext.Circuitos.Include(c => c.Region);
-            return View(circuitos.ToList());
+            return View(circuitos.ToList().ToPagedList(page ?? 1,10));
         }
 
         // GET: Circuitos/Details/5

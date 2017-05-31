@@ -1,4 +1,7 @@
-﻿@model IEnumerable<AICRDWEB.Models.Circuitos>
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IPagedList<AICRDWEB.Models.Circuitos>
 
 @{
     ViewBag.Title = "Index";
@@ -12,13 +15,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Region.NombreRegion)
+            @Html.DisplayNameFor(model => model.First().Region.NombreRegion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NombreCircuito)
+            @Html.DisplayNameFor(model => model.First().NombreCircuito)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
+            @Html.DisplayNameFor(model => model.First().Descripcion)
         </th>
         <th></th>
     </tr>
@@ -41,5 +44,7 @@
         </td>
     </tr>
 }
+   
 
 </table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
